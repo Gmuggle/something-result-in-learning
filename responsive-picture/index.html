@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<title>学习响应式图片</title>
+<meta name="author" content="李康">
+<meta charset="utf-8">
+<style>
+    img.fixedSize{
+        width: 320px;
+    }
+</style>
+</head>
+
+<body>
+
+<p>这是我的家庭合影-艺术方向</p>
+<picture>
+    <source type="image/jpg" media="(max-width: 479px)" srcset="images/responsive-art-direction.JPG">
+    <source type="image/jpg" media="(min-width: 480px)" srcset="images/responsive-640w.JPG">
+    <img src="images/responsive-640w.JPG" alt="家族合影">
+</picture>
+
+<p>改变SIZE</p>
+<img srcset="images/responsive-320w.JPG 320w, 
+             images/responsive-480w.JPG 480w, 
+             images/responsive-640w.JPG 640w"
+
+    sizes="(max-width: 320px) 280px, 
+          (max-width: 480px) 440px, 
+          600px"
+    src="images/responsive-640w.JPG" alt="家庭合影">
+
+<p>SIZE不变</p>
+<img class="fixedSize" srcset="images/responsive-320w.JPG, 
+             images/responsive-480w.JPG 1.5x, 
+             images/responsive-640w.JPG 2x"
+
+    src="images/responsive-640w.JPG" alt="家庭合影">
+
+</body>
+
+</html>

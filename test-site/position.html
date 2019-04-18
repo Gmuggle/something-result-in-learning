@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="urf-8">
+        <tile>position</tile>
+        <style>
+            body {
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid;
+            }
+
+            html{
+            border: 1px solid;
+            padding: 100px;
+            margin: 100px;
+            }
+
+            div{
+            background-color: rgba(0,0,0,0.2);
+            border: 20px solid black;
+            padding: 20px;
+            margin: 20px;
+
+            }
+            
+            div{
+                position: absolute;
+                top: 20px;
+                left: 200px;
+            }
+
+            p {
+            background-color: rgb(207,232,220);
+            border: 2px solid rgb(79,185,227);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            }
+            .positioned {
+            position: absolute;
+            background: rgba(255,84,104,.3);
+            border: 2px solid rgb(255,84,104);
+                margin: 10;
+            top: 10px;
+            left: 30px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>Absolute positioning</h1>
+        <div>
+        <article>
+            <p>I am a basic block level element.</p>
+            <p class="positioned">This is my absolutely positioned element.</p>
+            <p>I am a basic block level element.</p>
+        </article>
+        </div>
+    </body>
+</html>

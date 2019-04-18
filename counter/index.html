@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>测试counter的工作原理</title>
+        <style>
+            @counter-style test{
+                system: cyclic;
+                symbols: ! _;
+                suffix: " ";
+            }
+            
+            ul li{
+                list-style: test;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <ul>
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+            <li>七</li>
+            <li>八</li>
+        </ul>
+    </body>
+</html>
