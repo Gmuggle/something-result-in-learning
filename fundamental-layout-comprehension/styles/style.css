@@ -1,0 +1,141 @@
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+  }
+  
+  .logo {
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+  }
+  
+  nav {
+    background-color: #000;
+    padding: .5em;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+  }
+  
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .feature {
+      width: 200px;
+  }
+/* navigation styles */
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    float: left;
+    width: 100%;
+}
+
+nav ul li{
+    flex: 1 100px;
+    float: left;
+    width: 20%;
+}
+
+/* main content styles */
+main.grid{
+    display: flex;
+    clear: both;
+    padding-right: 2.08333333%;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+main article{
+    /*flex: 2;*/
+    float: left;
+    margin-left: 2.08333333%;
+    width: calc((6.25%*8) + (2.08333333%*7));
+    
+    grid-column: 1 / 9;
+}
+
+article img{
+    float: left;
+    margin-right: 20px;
+}
+
+main aside{
+    flex: 1;
+    float:left;
+    width: calc((6.25%*4) + (2.08333333%*3));
+    margin-left: 2.08333333%;
+    
+    grid-column: 9 / 13;
+}
+
+aside ul.photos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    gap: 1px;
+    
+}
+
+aside ul.photos li{
+    float: left;
+    width: 50%;
+    
+}
+
+@supports(display: grid){
+    main.grid{
+        padding: 20px;
+    }
+    
+    main article{
+        margin: auto;
+        width: auto;
+    }
+    main aside{
+        width: auto;
+        margin: 0;
+    }
+    aside ul.photos li{
+        width: auto;
+    }
+    nav ul li{
+        width: auto;
+    }
+}
